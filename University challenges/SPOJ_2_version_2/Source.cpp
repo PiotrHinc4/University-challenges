@@ -5,7 +5,7 @@ using namespace std;
 void prime_numbers(int first_number, int last_number)
 {
 	int range_size = last_number - first_number;
-	int range[11];
+	int range[1000];
 	int actual_number = 2;
 
 
@@ -14,6 +14,7 @@ void prime_numbers(int first_number, int last_number)
 		range[indeks] = indeks;
 	}
 
+	// I use hier sieve of Eratosthenes
 	for (int indeks = 2; indeks <= sqrt(last_number); indeks++)
 	{
 		for (int indeks2 = indeks; indeks2 <= last_number; indeks2++)
